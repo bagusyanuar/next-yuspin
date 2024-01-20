@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import {
-  NavbarWrapper,
   NavLinkWrapper,
   NavLink,
   NavActionWrapper,
@@ -10,6 +9,8 @@ import {
   NavSidebarBackdrop,
   NavSidebar
 } from '@/components/navigation/navbar/styled-components'
+import { device } from '@/components/media';
+import styled from 'styled-components';
 
 function Index() {
   const [backdropSidebarShow, setBackdropSidebarShow] = useState<boolean>(false);
@@ -24,14 +25,16 @@ function Index() {
   }
 
   const handleCloseSidebar = () => {
-    setBackdropSidebarShow(false)
     setSidebarShow(false)
+    setTimeout(() => {
+      setBackdropSidebarShow(false)
+    }, 200);
   }
 
 
   return (
     <>
-      <NavbarWrapper>
+      <Wrapper>
         <NavMenu onClick={handleShowNavSidebar}>
           <i className='bx bx-menu'></i>
         </NavMenu>
@@ -53,7 +56,7 @@ function Index() {
             <i className='bx bx-user'></i>
           </NavAction>
         </NavActionWrapper>
-      </NavbarWrapper>
+      </Wrapper>
       <NavSidebarBackdrop $active={backdropSidebarShow} onClick={handleCloseSidebar}>
         <NavSidebar $active={sidebarShow}>
           <Image src="/assets/images/brand.png" height={40} width={80} alt='brand-logo' />
@@ -64,3 +67,18 @@ function Index() {
 }
 
 export default Index
+
+const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    
+    @media ${device.tabletS} {
+      padding: 0.75rem 1.5rem;
+    }
+    
+    @media ${device.laptop} {
+      padding: 0.75rem 5rem;
+    }
+`

@@ -1,14 +1,9 @@
 import React from 'react'
-import { ContainerWrapper } from './styled-components'
+import MainSection from './main-section'
+import Technology from './technology'
 
-interface ContainerProps { children: React.ReactNode, className?: string }
+export default MainSection
+export const SectionTechnology = Technology
 
-function Index({ children, className = '' }: ContainerProps) {
-    return (
-        <ContainerWrapper className={className}>
-            {children}
-        </ContainerWrapper>
-    )
-}
-
-export default Index
+export interface MainSectionProps { children: React.ReactNode, className?: string }
+export interface TechnologySectionProps { children: React.ReactNode, className?: string }

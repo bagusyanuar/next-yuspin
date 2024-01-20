@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/navigation/navbar'
 import { Carousel, IconButton } from '@material-tailwind/react'
-import Section from '@/components/container/section'
+import Section, { SectionTechnology } from '@/components/container/section'
 import SectionTitle from '@/components/typography/section-title'
 import { CardTechnology } from '@/components/container/card'
 
@@ -81,35 +81,32 @@ export default function Home() {
             className='w-full max-h-[500px] object-contain' />
         </Carousel>
       </Section>
-      <Section className='mt-6'>
+      <Section>
         <SectionTitle
           text='DILENGKAPI DENGAN TEKNOLOGI ANTI BAKTERI SILVER +'
-          className='mb-11'
         />
-        <div className='xl:px-32 lg:px-32 md:px-16 px-6'>
-          <div className='grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4'>
-            <CardTechnology
-              image='/assets/technologies/award.png'
-              title='SNI'
-              description='Yuspin bukan obat dan bukan makanan maka tidak memerlukan BPOM/depkes  Yuspin telah teruji laboratorium bebas klorin sesuai uji SNI.'
-            />
-            <CardTechnology
-              image='/assets/technologies/microscope.png'
-              title='Labolatorium Tested'
-              description='Yuspin telah melalui uji klinis laboratorium sesuai uji SNI'
-            />
-            <CardTechnology
-              image='/assets/technologies/flask.png'
-              title='Bebas Klorin'
-              description='Bahan baku Yuspin telah teruji laboratorium bebas klorin sesuai uji SNI.'
-            />
-            <CardTechnology
-              image='/assets/technologies/sanitary-pad.png'
-              title='Anti Bacterial Silver +'
-              description='Yuspin dirancang dengan anti bacterial silver +, technology Silver+ ini sudah teruji secara Internasional diuji secara klinis di Jerman'
-            />
-          </div>
-        </div>
+        <SectionTechnology>
+          <CardTechnology
+            image='/assets/technologies/award.png'
+            title='SNI'
+            description='Yuspin bukan obat dan bukan makanan maka tidak memerlukan BPOM/depkes  Yuspin telah teruji laboratorium bebas klorin sesuai uji SNI.'
+          />
+          <CardTechnology
+            image='/assets/technologies/microscope.png'
+            title='Labolatorium Tested'
+            description='Yuspin telah melalui uji klinis laboratorium sesuai uji SNI'
+          />
+          <CardTechnology
+            image='/assets/technologies/flask.png'
+            title='Bebas Klorin'
+            description='Bahan baku Yuspin telah teruji laboratorium bebas klorin sesuai uji SNI.'
+          />
+          <CardTechnology
+            image='/assets/technologies/sanitary-pad.png'
+            title='Anti Bacterial Silver +'
+            description='Yuspin dirancang dengan anti bacterial silver +, technology Silver+ ini sudah teruji secara Internasional diuji secara klinis di Jerman'
+          />
+        </SectionTechnology>
       </Section>
     </main>
   )

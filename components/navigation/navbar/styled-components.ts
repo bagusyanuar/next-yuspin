@@ -1,16 +1,7 @@
 import styled from 'styled-components'
 import { device } from '@/components/media'
 
-export const NavbarWrapper = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.75rem 2rem;
-    
-    @media ${device.laptop} {
-      padding: 0.75rem 5rem;
-    }
-`
+
 
 export const NavLinkWrapper = styled.div`
     display: none;
@@ -81,7 +72,7 @@ export const NavMenu = styled.a`
     justify-content: center;
 
     &:hover {
-    background-color: rgba(220, 220, 220, 0.3)
+      background-color: rgba(220, 220, 220, 0.3)
     }
 
     @media ${device.laptop} {
@@ -91,7 +82,7 @@ export const NavMenu = styled.a`
 
 export const NavSidebarBackdrop = styled.div<{ $active: boolean }>`
     display: ${(props) => props.$active ? 'block' : 'none'};
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -101,7 +92,7 @@ export const NavSidebarBackdrop = styled.div<{ $active: boolean }>`
 `
 
 export const NavSidebar = styled.div<{ $active: boolean }>`
-    position: absolute;
+    position: fixed;
     top: 0;
     transform: ${(props) => props.$active ? 'translateX(0%)' : 'translateX(-100%)'};
     transition: transform 0.2s ease-in-out;
