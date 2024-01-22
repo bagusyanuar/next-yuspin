@@ -116,12 +116,12 @@ export default function Home() {
         <SectionSubTitle
           text='Dapatkan Produk - Produk Best Seller Kami'
         />
-        <SectionBestSeller>
+        <SectionBestSeller className='w-100'>
           <CardBestSeller image='' price={0} name=''>
           </CardBestSeller>
-          <CardBestSeller image='' price={0} name=''>
+          <CardBestSeller image='' price={0} name='w-1/2'>
           </CardBestSeller>
-          <CardBestSeller image='' price={0} name=''>
+          <CardBestSeller image='' price={0} name='w-1/2'>
           </CardBestSeller>
           
         </SectionBestSeller>

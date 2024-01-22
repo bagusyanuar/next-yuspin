@@ -10,7 +10,7 @@ function BestSeller({
     className = ''
 }: CardBestSellerProps) {
     return (
-        <CardBestSellerWrapper>
+        <CardBestSellerWrapper className={className}>
 
         </CardBestSellerWrapper>
     )
@@ -22,10 +22,23 @@ const CardBestSellerWrapper = styled.div`
     display: flex;
     flex-direction: column;
     background-color: white;
+    width: 100%;
     height: 250px;
     align-items: center;
     justify-content: start;
     border-radius: 8px;
     padding: 8px 12px;
+
+    @media ${device.tablet} {
+        width: calc((100% - 15rem) / 2);
+    }
+    
+    @media ${device.laptopS} {
+        width: calc((100% - 2.5rem) / 4);
+    }
+    
+    @media ${device.laptop} {
+        width: calc((100% - 5rem) / 4);
+    }
 `
 

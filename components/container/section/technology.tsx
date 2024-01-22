@@ -15,7 +15,6 @@ export default Technology
 
 const TechnologySectionWrapper = styled.section`
     padding: 0.25rem 2rem;
-    background-color: blue;
     display: grid;
     gap: 0.25rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
