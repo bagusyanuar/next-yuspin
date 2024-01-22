@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import { device } from '@/components/media'
 
-interface SectionTitleProps { text: string, className?: string }
+import { SectionTitleProps } from './index'
 
 function SectionTitle({ text, className = '' }: SectionTitleProps) {
     return (

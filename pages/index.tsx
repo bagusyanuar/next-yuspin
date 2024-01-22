@@ -2,9 +2,9 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/navigation/navbar'
 import { Carousel, IconButton } from '@material-tailwind/react'
-import Section, { SectionTechnology } from '@/components/container/section'
-import SectionTitle from '@/components/typography/section-title'
-import { CardTechnology } from '@/components/container/card'
+import Section, { SectionTechnology, SectionBestSeller } from '@/components/container/section'
+import { SectionTitle, SectionSubTitle } from '@/components/typography'
+import { CardTechnology, CardBestSeller } from '@/components/container/card'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -107,6 +107,24 @@ export default function Home() {
             description='Yuspin dirancang dengan anti bacterial silver +, technology Silver+ ini sudah teruji secara Internasional diuji secara klinis di Jerman'
           />
         </SectionTechnology>
+      </Section>
+      <Section>
+        <SectionTitle
+          text='BEST SELLER'
+          className='!mb-0'
+        />
+        <SectionSubTitle
+          text='Dapatkan Produk - Produk Best Seller Kami'
+        />
+        <SectionBestSeller>
+          <CardBestSeller image='' price={0} name=''>
+          </CardBestSeller>
+          <CardBestSeller image='' price={0} name=''>
+          </CardBestSeller>
+          <CardBestSeller image='' price={0} name=''>
+          </CardBestSeller>
+          
+        </SectionBestSeller>
       </Section>
     </main>
   )

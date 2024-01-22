@@ -1,67 +1,35 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import {
-  NavLinkWrapper,
-  NavLink,
-  NavActionWrapper,
-  NavAction,
-  NavMenu,
-  NavSidebarBackdrop,
-  NavSidebar
-} from '@/components/navigation/navbar/styled-components'
+import NavActionWrapper, { NavAction } from './action'
+import NavLinkWrapper, { NavLink } from './link'
+import NavMenu from './menu'
 import { device } from '@/components/media';
 import styled from 'styled-components';
 
 function Index() {
-  const [backdropSidebarShow, setBackdropSidebarShow] = useState<boolean>(false);
-  const [sidebarShow, setSidebarShow] = useState<boolean>(false);
-
-  const handleShowNavSidebar = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault()
-    setBackdropSidebarShow(!backdropSidebarShow)
-    setTimeout(() => {
-      setSidebarShow(!sidebarShow)
-    }, 100);
-  }
-
-  const handleCloseSidebar = () => {
-    setSidebarShow(false)
-    setTimeout(() => {
-      setBackdropSidebarShow(false)
-    }, 200);
-  }
-
-
   return (
     <>
       <Wrapper>
-        <NavMenu onClick={handleShowNavSidebar}>
-          <i className='bx bx-menu'></i>
+        <NavMenu>
+          <Image src="/assets/images/brand.png" height={40} width={80} alt='brand-logo' />
         </NavMenu>
         <Image src="/assets/images/brand.png" height={40} width={60} alt='brand-logo' />
         <NavLinkWrapper className=''>
-          <NavLink href='#'>PRODUK</NavLink>
-          <NavLink href='#'>KOMUNITAS</NavLink>
-          <NavLink href='#'>PENDAFTARAN MITRA</NavLink>
-          <NavLink href='#'>PRODUK</NavLink>
+          <NavLink to='#'>PRODUK</NavLink>
+          <NavLink to='#'>KOMUNITAS</NavLink>
+          <NavLink to='#'>PENDAFTARAN MITRA</NavLink>
+          <NavLink to='#'>PRODUK</NavLink>
         </NavLinkWrapper>
         <NavActionWrapper>
-          <NavAction $hideonsmall>
-            <i className='bx bx-search'></i>
-          </NavAction>
-          <NavAction $hideonsmall={false}>
+          <NavAction hideOnsmall={false}>
             <i className='bx bx-cart'></i>
+            <Badge className='bg-primary'>99</Badge>
           </NavAction>
-          <NavAction $hideonsmall>
+          <NavAction>
             <i className='bx bx-user'></i>
           </NavAction>
         </NavActionWrapper>
       </Wrapper>
-      <NavSidebarBackdrop $active={backdropSidebarShow} onClick={handleCloseSidebar}>
-        <NavSidebar $active={sidebarShow}>
-          <Image src="/assets/images/brand.png" height={40} width={80} alt='brand-logo' />
-        </NavSidebar>
-      </NavSidebarBackdrop>
     </>
   )
 }
@@ -81,4 +49,18 @@ const Wrapper = styled.div`
     @media ${device.laptop} {
       padding: 0.75rem 5rem;
     }
+`
+
+const Badge = styled.div`
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    color: white;
+    top: 2px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px !important;
 `

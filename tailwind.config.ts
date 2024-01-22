@@ -16,7 +16,11 @@ const config: Config = {
       },
       colors: {
         'primary': '#F36486',
-        'primary-dark': '#242424'
+        'primary-dark': '#242424',
+        'slate-500': 'rgb(100, 116, 139)',
+        'slate-600': 'rgb(71, 85, 105)',
+        'slate-700': 'rgb(51, 65, 85)',
+        'slate-800': 'rgb(30, 41, 59)'
       },
       fontSize: {
         'base': '16px',

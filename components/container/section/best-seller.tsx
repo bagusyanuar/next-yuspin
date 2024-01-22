@@ -1,24 +1,29 @@
 import React from 'react'
-import styled from "styled-components";
+import styled from 'styled-components'
 import { device } from '@/components/media'
-import { TechnologySectionProps } from './index'
+import { BestSellerSectionProps } from './index'
 
-function Technology({ children, className = '' }: TechnologySectionProps) {
-  return (
-    <TechnologySectionWrapper className=''>
-      {children}
-    </TechnologySectionWrapper>
-  )
+function BestSeller({
+    children,
+    className = ''
+}: BestSellerSectionProps) {
+    return (
+        <BestSellerWrapper>
+            {children}
+        </BestSellerWrapper>
+    )
 }
 
-export default Technology
+export default BestSeller
 
-const TechnologySectionWrapper = styled.section`
+const BestSellerWrapper = styled.section`
+    width: 100%;
     padding: 0.25rem 2rem;
-    background-color: blue;
+    background-color: green;
     display: grid;
-    gap: 0.25rem;
+    gap: 1rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-items: center;
 
     @media ${device.tabletS} {
       padding: 0.25rem 6rem;
@@ -41,5 +46,6 @@ const TechnologySectionWrapper = styled.section`
     
     @media ${device.laptop} {
       padding: 0.25rem 8rem;
+      
     }
 `

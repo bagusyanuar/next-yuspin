@@ -13,8 +13,8 @@ function Technology({
     return (
         <CardTechnologyWrapper className={className}>
             <CardTechnologyImage height={64} width={64} src={image} alt='technology-image' className='mb-3'/>
-            <CardTechnologyTitle className='mb-2'><p>{title}</p></CardTechnologyTitle>
-            <CardTechnologyDescription><p>{description}</p></CardTechnologyDescription>
+            <CardTechnologyTitle className='text-slate-700 mb-2'><p>{title}</p></CardTechnologyTitle>
+            <CardTechnologyDescription><p className='text-slate-600'>{description}</p></CardTechnologyDescription>
         </CardTechnologyWrapper>
     )
 }
