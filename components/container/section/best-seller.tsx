@@ -17,8 +17,7 @@ function BestSeller({
 export default BestSeller
 
 const BestSellerWrapper = styled.section`
-    padding: 0.25rem 4.5rem;
-    background-color: green;
+    padding: 0.25rem 0.25rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -26,22 +25,22 @@ const BestSellerWrapper = styled.section`
     gap: 1rem;
 
     @media ${device.tabletS} {
-      padding: 0.25rem 8rem;
+      padding: 0.25rem 0.25rem;
     }
     
     @media ${device.tablet} {
-      padding: 0.25rem 6rem;
+      padding: 0.25rem 0.5rem;
     }
     
     @media ${device.tabletL} {
-      padding: 0.25rem 8rem;
+      padding: 0.25rem 0.5rem;
     }
 
     @media ${device.laptopS} {
-      padding: 0.25rem 2rem;
+      padding: 0.25rem 0.5rem;
     }
     
     @media ${device.laptop} {
-      padding: 0.25rem 8rem;
+      padding: 0.25rem 0.5rem;
     }
 `

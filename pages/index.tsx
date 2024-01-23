@@ -117,11 +117,17 @@ export default function Home() {
           text='Dapatkan Produk - Produk Best Seller Kami'
         />
         <SectionBestSeller className='w-100'>
-          <CardBestSeller image='' price={0} name=''>
+          <CardBestSeller image='/assets/sample/product-1.png' price={7500} name='Yuspin Sabun Cuci' locations={['Jakarta', 'Bandung']}>
           </CardBestSeller>
-          <CardBestSeller image='' price={0} name='w-1/2'>
+          <CardBestSeller image='/assets/sample/product-2.png' price={125000} name='Yuspin Pembalut Kain Reguler' locations={['Medan', 'Aceh']}>
           </CardBestSeller>
-          <CardBestSeller image='' price={0} name='w-1/2'>
+          <CardBestSeller image='/assets/sample/product-3.png' price={50000} name='Yuspin Pembalut Kain Premium' locations={['Surabaya', 'Surakarta']}>
+          </CardBestSeller>
+          <CardBestSeller image='/assets/sample/product-4.png' price={4000} name='Yuspin Cloudi Lansia' locations={['Pekalongan']}>
+          </CardBestSeller>
+          <CardBestSeller image='/assets/sample/product-4.png' price={4000} name='Yuspin Cloudi Lansia' locations={['Pekalongan']}>
+          </CardBestSeller>
+          <CardBestSeller image='/assets/sample/product-4.png' price={4000} name='Yuspin Cloudi Lansia' locations={['Pekalongan']}>
           </CardBestSeller>
           
         </SectionBestSeller>
