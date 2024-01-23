@@ -8,7 +8,7 @@ function BestSeller({
     className = ''
 }: BestSellerSectionProps) {
     return (
-        <BestSellerWrapper>
+        <BestSellerWrapper className={className}>
             {children}
         </BestSellerWrapper>
     )

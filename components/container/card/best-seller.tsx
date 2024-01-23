@@ -13,30 +13,34 @@ function BestSeller({
 }: CardBestSellerProps) {
     return (
         <CardBestSellerWrapper className={`shadow-md ${className}`}>
-            <Image
+            <ImageWrapper
                 src={image}
                 height={300}
                 width={500}
                 alt='img-product'
             />
-            <div className='h-full w-100 product-information'>
-                <p className='product-name text-slate-800'>{name}</p>
-                <p className='product-price text-primary'>Rp{price.toLocaleString('id-ID')}</p>
-                <div className='product-location'>
+            <ProductInformationWrapper>
+                <ProductNameWrapper className='text-slate-800'>{name}</ProductNameWrapper>
+                <ProductPriceWrapper className='text-primary'>Rp{price.toLocaleString('id-ID')}</ProductPriceWrapper>
+                <ProductLocationWrapper>
                     <i className='bx bxs-map text-green-500 me-1'></i>
                     {
                         locations.map((v, k) => {
-                            return <span key={k} className='product-agent text-slate-500'>{`${v},`}</span>
+                            return <ProductAgentWrapper
+                                key={k}
+                                className='text-slate-500'>
+                                {`${v},`}
+                            </ProductAgentWrapper>
                         })
                     }
-                </div>
-                <div className='product-rate'>
+                </ProductLocationWrapper>
+                <ProductRateWrapper>
                     <i className='bx bxs-star text-orange-500 me-1 '></i>
-                    <p className='text-slate-500'>5</p>
+                    <ProductRateTextContent className='text-slate-500'>5</ProductRateTextContent>
                     <span className='text-slate-500 mx-1'>|</span>
-                    <p className='text-slate-500'>7 terjual</p>
-                </div>
-            </div>
+                    <ProductRateTextContent className='text-slate-500'>7 terjual</ProductRateTextContent>
+                </ProductRateWrapper>
+            </ProductInformationWrapper>
         </CardBestSellerWrapper>
     )
 }
@@ -48,57 +52,55 @@ const CardBestSellerWrapper = styled.div`
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 190px;
-    height: 300px;
+    width: 200px;
+    height: 320px;
     align-items: center;
     justify-content: start;
     border-radius: 8px;
-
-    img {
-        width: 100%;
-        height: 0px;
-        flex: 2;
-        border-top-right-radius: 8px;
-        border-top-left-radius: 8px;
-        object-fit: cover;
-        object-position: center center;
-    }
-
-    .product-information {
-        flex: 1.5;
-        width: 100%;
-        padding: 0.1rem 0.5rem;
-
-        .product-name {
-            margin-bottom: 0;
-            font-size: 0.8em;
-        }
-
-        .product-price {
-            margin-bottom: 0;
-            font-size: 1em;
-            font-weight: bold;
-        }
-
-        .product-location {
-            display: flex;
-            align-items: center;
-
-            .product-agent {
-                margin-bottom: 0;
-                font-size: 0.7em;
-            }
-        }
-
-        .product-rate {
-            display: flex;
-            align-items: center;
-
-            p {
-                margin-bottom: 0;
-                font-size: 0.7em;
-            }
-        }
-    }
+`
+const ImageWrapper = styled(Image)`
+    width: 100%;
+    height: 0px;
+    flex: 3;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    object-fit: cover;
+    object-position: center center;
 `
 
+const ProductInformationWrapper = styled.div`
+    flex: 2;
+    width: 100%;
+    height: 100%;
+    padding: 0.1rem 0.5rem;
+`
+
+const ProductNameWrapper = styled.p`
+    margin-bottom: 0;
+    font-size: 0.8em;
+`
+
+const ProductPriceWrapper = styled.div`
+    margin-bottom: 0;
+    font-size: 1em;
+    font-weight: bold;
+`
+
+const ProductLocationWrapper = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+const ProductAgentWrapper = styled.span`
+    margin-bottom: 0;
+    font-size: 0.7em;
+`
+const ProductRateWrapper = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+const ProductRateTextContent = styled.p`
+    margin-bottom: 0;
+    font-size: 0.7em;
+`

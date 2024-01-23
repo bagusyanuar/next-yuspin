@@ -5,6 +5,8 @@ import { Carousel, IconButton } from '@material-tailwind/react'
 import Section, { SectionTechnology, SectionBestSeller } from '@/components/container/section'
 import { SectionTitle, SectionSubTitle } from '@/components/typography'
 import { CardTechnology, CardBestSeller } from '@/components/container/card'
+import BaseButton from '@/components/button'
+import Footer from '@/components/navigation/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -116,7 +118,7 @@ export default function Home() {
         <SectionSubTitle
           text='Dapatkan Produk - Produk Best Seller Kami'
         />
-        <SectionBestSeller className='w-100'>
+        <SectionBestSeller className='w-100 mb-5'>
           <CardBestSeller image='/assets/sample/product-1.png' price={7500} name='Yuspin Sabun Cuci' locations={['Jakarta', 'Bandung']}>
           </CardBestSeller>
           <CardBestSeller image='/assets/sample/product-2.png' price={125000} name='Yuspin Pembalut Kain Reguler' locations={['Medan', 'Aceh']}>
@@ -125,13 +127,108 @@ export default function Home() {
           </CardBestSeller>
           <CardBestSeller image='/assets/sample/product-4.png' price={4000} name='Yuspin Cloudi Lansia' locations={['Pekalongan']}>
           </CardBestSeller>
-          <CardBestSeller image='/assets/sample/product-4.png' price={4000} name='Yuspin Cloudi Lansia' locations={['Pekalongan']}>
-          </CardBestSeller>
-          <CardBestSeller image='/assets/sample/product-4.png' price={4000} name='Yuspin Cloudi Lansia' locations={['Pekalongan']}>
-          </CardBestSeller>
-          
         </SectionBestSeller>
+        <div className='w-full flex justify-center'>
+          <BaseButton className='inline-block' onClick={() => { }}>
+            Lihat Produk Lainnya
+          </BaseButton>
+        </div>
       </Section>
+      <Section>
+        <SectionTitle
+          text='REVIEW'
+          className='!mb-0'
+        />
+        <SectionSubTitle
+          text='Kata Yuspiners yang telah menggunakan produk Yuspin'
+        />
+        <div className='h-48 w-full flex items-center content-center'>
+          <SectionSubTitle
+            text='NO CONTENT'
+          />
+        </div>
+      </Section>
+      <Section>
+        <div className='w-full flex flex-wrap items-center content-center px-12 py-8'>
+          <Image
+            src='/assets/partners/i-news.png'
+            alt='image-partner'
+            width={68}
+            height={20}
+            className='me-5'
+          />
+          <Image
+            src='/assets/partners/md.png'
+            alt='image-partner'
+            width={40}
+            height={20}
+            className='me-5'
+          />
+          <Image
+            src='/assets/partners/tribun-news.png'
+            alt='image-partner'
+            width={84}
+            height={20}
+            className='me-5'
+          />
+          <Image
+            src='/assets/partners/sindo-news.png'
+            alt='image-partner'
+            width={156}
+            height={20}
+            className='me-5'
+          />
+          <Image
+            src='/assets/partners/interupsi.png'
+            alt='image-partner'
+            width={120}
+            height={20}
+            className='me-5'
+          />
+          <Image
+            src='/assets/partners/akurat.png'
+            alt='image-partner'
+            width={100}
+            height={20}
+            className='me-5'
+          />
+          <Image
+            src='/assets/partners/telusur.png'
+            alt='image-partner'
+            width={70}
+            height={20}
+            className='me-5'
+          />
+          <Image
+            src='/assets/partners/klik.png'
+            alt='image-partner'
+            width={20}
+            height={20}
+            className='me-5'
+          />
+          <Image
+            src='/assets/partners/indopos.png'
+            alt='image-partner'
+            width={122}
+            height={20}
+            className='me-5'
+          />
+          <Image
+            src='/assets/partners/rumah-gagasan.png'
+            alt='image-partner'
+            width={79}
+            height={20}
+            className='me-5'
+          />
+          <Image
+            src='/assets/partners/edu-news.png'
+            alt='image-partner'
+            width={119}
+            height={20}
+          />
+        </div>
+      </Section>
+      <Footer />
     </main>
   )
 }
