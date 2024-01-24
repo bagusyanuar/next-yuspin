@@ -6,7 +6,8 @@ import Section, { SectionTechnology, SectionBestSeller } from '@/components/cont
 import { SectionTitle, SectionSubTitle } from '@/components/typography'
 import { CardTechnology, CardBestSeller } from '@/components/container/card'
 import BaseButton from '@/components/button'
-import Footer from '@/components/navigation/footer'
+import Hero from '@/components/hero'
+import Footer, { FooterTagLine,FooterDescription } from '@/components/navigation/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -149,76 +150,76 @@ export default function Home() {
         </div>
       </Section>
       <Section>
-        <div className='w-full flex flex-wrap items-center content-center px-12 py-8'>
+        <div className='w-full flex flex-wrap items-center justify-center px-12 py-8'>
           <Image
             src='/assets/partners/i-news.png'
             alt='image-partner'
             width={68}
             height={20}
-            className='me-5'
+            className='me-5 mb-1'
           />
           <Image
             src='/assets/partners/md.png'
             alt='image-partner'
             width={40}
             height={20}
-            className='me-5'
+            className='me-5 mb-1'
           />
           <Image
             src='/assets/partners/tribun-news.png'
             alt='image-partner'
             width={84}
             height={20}
-            className='me-5'
+            className='me-5 mb-1'
           />
           <Image
             src='/assets/partners/sindo-news.png'
             alt='image-partner'
             width={156}
             height={20}
-            className='me-5'
+            className='me-5 mb-1'
           />
           <Image
             src='/assets/partners/interupsi.png'
             alt='image-partner'
             width={120}
             height={20}
-            className='me-5'
+            className='me-5 mb-1'
           />
           <Image
             src='/assets/partners/akurat.png'
             alt='image-partner'
             width={100}
             height={20}
-            className='me-5'
+            className='me-5 mb-1'
           />
           <Image
             src='/assets/partners/telusur.png'
             alt='image-partner'
             width={70}
             height={20}
-            className='me-5'
+            className='me-5 mb-1'
           />
           <Image
             src='/assets/partners/klik.png'
             alt='image-partner'
             width={20}
             height={20}
-            className='me-5'
+            className='me-5 mb-1'
           />
           <Image
             src='/assets/partners/indopos.png'
             alt='image-partner'
             width={122}
             height={20}
-            className='me-5'
+            className='me-5 mb-1'
           />
           <Image
             src='/assets/partners/rumah-gagasan.png'
             alt='image-partner'
             width={79}
             height={20}
-            className='me-5'
+            className='me-5 mb-1'
           />
           <Image
             src='/assets/partners/edu-news.png'
@@ -228,7 +229,14 @@ export default function Home() {
           />
         </div>
       </Section>
-      <Footer />
+      <Section className='!px-0 !py-0'>
+        <Hero />
+      </Section>
+      <Footer>
+        <FooterTagLine text='Yuspin - Cloth Your Napkins' />
+        <FooterDescription text='"Pilihan Tepat Wanita Cermat"Yuspin adalah pembalut wanita yg sehat dan hemat yang di desain khusus dari bahan kaos yg nyaman dan dipadukan dengan bahan handuk kualitas terbaik sehingga memiliki daya serap tinggi, dan bahan pelapis anti bocor khusus yang memberi kenyamanan saat dipakai sehingga tidak mudah bocor.' />
+        <hr className='border-b-white border-b-2'/>
+      </Footer>
     </main>
   )
 }

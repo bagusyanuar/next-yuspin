@@ -17,6 +17,8 @@ const config: Config = {
       colors: {
         'primary': '#F36486',
         'primary-dark': '#242424',
+        'primary-shades-80': '#fde0e7',
+        'primary-shades-90': '#fef0f3',
         'slate-500': 'rgb(100, 116, 139)',
         'slate-600': 'rgb(71, 85, 105)',
         'slate-700': 'rgb(51, 65, 85)',

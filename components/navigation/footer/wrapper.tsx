@@ -1,9 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FooterWrapperProps } from './index'
 
-function Wrapper() {
+function Wrapper({
+    children,
+    className = ''
+}: FooterWrapperProps) {
     return (
-        <FooterWrapper className='bg-primary'>
+        <FooterWrapper className={`bg-primary ${className}`}>
+            {children}
         </FooterWrapper>
     )
 }
@@ -11,6 +16,6 @@ function Wrapper() {
 export default Wrapper
 
 const FooterWrapper = styled.div`
-    padding: 2rem 5rem;
+    padding: 4rem 8rem;
     width: 100%;
 `
