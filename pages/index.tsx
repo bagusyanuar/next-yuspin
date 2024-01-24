@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import Text from '@/components/atoms/text'
 import Navbar from '@/components/navigation/navbar'
 import { Carousel, IconButton } from '@material-tailwind/react'
 import Section, { SectionTechnology, SectionBestSeller } from '@/components/container/section'
@@ -7,7 +8,8 @@ import { SectionTitle, SectionSubTitle } from '@/components/typography'
 import { CardTechnology, CardBestSeller } from '@/components/container/card'
 import BaseButton from '@/components/button'
 import Hero from '@/components/hero'
-import Footer, { FooterTagLine,FooterDescription } from '@/components/navigation/footer'
+import Footer, { FooterTagLine, FooterDescription } from '@/components/navigation/footer'
+import FooterInformation, { FooterInformationColumn, FooterInformationTitle } from '@/components/navigation/footer/information'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -235,7 +237,12 @@ export default function Home() {
       <Footer>
         <FooterTagLine text='Yuspin - Cloth Your Napkins' />
         <FooterDescription text='"Pilihan Tepat Wanita Cermat"Yuspin adalah pembalut wanita yg sehat dan hemat yang di desain khusus dari bahan kaos yg nyaman dan dipadukan dengan bahan handuk kualitas terbaik sehingga memiliki daya serap tinggi, dan bahan pelapis anti bocor khusus yang memberi kenyamanan saat dipakai sehingga tidak mudah bocor.' />
-        <hr className='border-b-white border-b-2'/>
+        <hr className='border-b-white border-b-2 mb-5' />
+        <FooterInformation>
+          <FooterInformationColumn>
+              <Text text='coba' size='small' className='text-white' />
+          </FooterInformationColumn>
+        </FooterInformation>
       </Footer>
     </main>
   )
