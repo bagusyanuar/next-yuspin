@@ -5,10 +5,17 @@ import { StyledLink } from './link.styled'
 function Link({
     text,
     to = '#',
-    className = ''
+    className = '',
+    color = 'black',
+    hoverColor
 }: IProps) {
     return (
-        <StyledLink href={to} className={className}>
+        <StyledLink
+            href={to}
+            className={className}
+            color={color}
+            hoverColor={hoverColor ? hoverColor : color}
+        >
             {text}
         </StyledLink>
     )

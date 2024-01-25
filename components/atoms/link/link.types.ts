@@ -1,7 +1,12 @@
-import React from 'react'
-
 export interface IProps {
     text: string,
     to: string,
-    className?: string
+    className?: string,
+    color?: string,
+    hoverColor?: string
+}
+
+export interface IStyledProps {
+    color: string
+    hoverColor: string
 }

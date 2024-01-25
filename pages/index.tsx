@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Text from '@/components/atoms/text'
 import Button from '@/components/atoms/button'
-import Link, { NavLink } from '@/components/atoms/link'
+import Link from '@/components/atoms/link'
 import Navbar from '@/components/navigation/navbar'
 import { Carousel, IconButton } from '@material-tailwind/react'
 import Section, { SectionTechnology, SectionBestSeller } from '@/components/container/section'
@@ -251,10 +251,8 @@ export default function Home() {
         <div className='inline-block'>
           <Button type='accent-outlined' size='small'>ABC</Button>
         </div>
-        <Link to='#' text='this is basic link' />
-        <div className='inline-block'>
-          <NavLink to='#' text='THIS IS NAV LINK' />
-        </div>
+        <Link to='#' text='this is basic link' color='#F36486' hoverColor='red' />
+        
       </div>
     </main>
   )
