@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Text from '@/components/atoms/text'
+import Button from '@/components/atoms/button'
+import Link, { NavLink } from '@/components/atoms/link'
 import Navbar from '@/components/navigation/navbar'
 import { Carousel, IconButton } from '@material-tailwind/react'
 import Section, { SectionTechnology, SectionBestSeller } from '@/components/container/section'
@@ -240,10 +242,20 @@ export default function Home() {
         <hr className='border-b-white border-b-2 mb-5' />
         <FooterInformation>
           <FooterInformationColumn>
-              <Text text='coba' size='small' className='text-white' />
+            c
           </FooterInformationColumn>
         </FooterInformation>
       </Footer>
+      <div className='w-full px-10 py-10'>
+        <Text text='coba' size='extra-large' className='mb-5' />
+        <div className='inline-block'>
+          <Button type='accent-outlined' size='small'>ABC</Button>
+        </div>
+        <Link to='#' text='this is basic link' />
+        <div className='inline-block'>
+          <NavLink to='#' text='THIS IS NAV LINK' />
+        </div>
+      </div>
     </main>
   )
 }

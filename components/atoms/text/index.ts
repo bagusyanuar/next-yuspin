@@ -1,3 +1,3 @@
-import Base from './base'
+import Text from './text'
 
-export default Base
+export default Text
