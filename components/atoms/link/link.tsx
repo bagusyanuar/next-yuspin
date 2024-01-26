@@ -7,14 +7,12 @@ function Link({
     to = '#',
     className = '',
     color = 'black',
-    hoverColor
 }: IProps) {
     return (
         <StyledLink
             href={to}
             className={className}
             color={color}
-            hoverColor={hoverColor ? hoverColor : color}
         >
             {text}
         </StyledLink>

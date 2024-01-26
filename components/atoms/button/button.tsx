@@ -1,6 +1,6 @@
 import React from 'react'
-import { ISize, IStyledProps, IProps } from './button.types'
-import { StyledButton } from './button.styled'
+import { IProps } from './type'
+import { StyledButton } from './style'
 
 function Button({
     children,

@@ -3,10 +3,8 @@ export interface IProps {
     to: string,
     className?: string,
     color?: string,
-    hoverColor?: string
 }
 
 export interface IStyledProps {
     color: string
-    hoverColor: string
 }

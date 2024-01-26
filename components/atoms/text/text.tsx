@@ -1,7 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
-import { ISize, IProps, IStyledProps } from './text.types'
-import { StyledText } from './text.styled'
+import { IProps } from './type'
+import { StyledText } from './style'
 
 function Text({
     text,

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IStyledProps, ISize } from './text.types'
+import { IStyledProps, ISize } from './type'
 
 const sizeProps: ISize = {
     'extra-small': {

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Text from '@/components/atoms/text'
-import Button from '@/components/atoms/button'
+import Button, { ButtonIcon } from '@/components/atoms/button'
 import Link from '@/components/atoms/link'
 import Navbar from '@/components/navigation/navbar'
 import { Carousel, IconButton } from '@material-tailwind/react'
@@ -18,241 +18,20 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <main>
-      <Navbar />
-      <Section>
-        <Carousel
-          placeholder={`image`}
-          className='rounded-xl items-center'
-          prevArrow={({ handlePrev }) => (
-            <IconButton
-              variant="text"
-              color="white"
-              size="sm"
-              onClick={handlePrev}
-              className="!absolute top-2/4 left-4 -translate-y-2/4 rounded-full bg-pink-200 hover:bg-primary"
-              placeholder={undefined}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="h-4 w-4"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-                />
-              </svg>
-            </IconButton>
-          )}
-          nextArrow={({ handleNext }) => (
-            <IconButton
-              variant="text"
-              color="white"
-              size="sm"
-              onClick={handleNext}
-              className="!absolute top-2/4 !right-4 -translate-y-2/4 rounded-full bg-pink-200 hover:bg-primary"
-              placeholder={undefined}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="h-4 w-4"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                />
-              </svg>
-            </IconButton>
-          )}
-        >
-          <Image
-            src='/assets/sliders/slider-yuspin.png'
-            alt='image-1'
-            width={1200}
-            height={600}
-            className='w-full max-h-[500px] object-contain' />
-          <Image
-            src='/assets/sliders/slider-yuspin-2.jpeg'
-            alt='image-1'
-            width={1200}
-            height={600}
-            className='w-full max-h-[500px] object-contain' />
-        </Carousel>
-      </Section>
-      <Section>
-        <SectionTitle
-          text='DILENGKAPI DENGAN TEKNOLOGI ANTI BAKTERI SILVER +'
-        />
-        <SectionTechnology>
-          <CardTechnology
-            image='/assets/technologies/award.png'
-            title='SNI'
-            description='Yuspin bukan obat dan bukan makanan maka tidak memerlukan BPOM/depkes  Yuspin telah teruji laboratorium bebas klorin sesuai uji SNI.'
-          />
-          <CardTechnology
-            image='/assets/technologies/microscope.png'
-            title='Labolatorium Tested'
-            description='Yuspin telah melalui uji klinis laboratorium sesuai uji SNI'
-          />
-          <CardTechnology
-            image='/assets/technologies/flask.png'
-            title='Bebas Klorin'
-            description='Bahan baku Yuspin telah teruji laboratorium bebas klorin sesuai uji SNI.'
-          />
-          <CardTechnology
-            image='/assets/technologies/sanitary-pad.png'
-            title='Anti Bacterial Silver +'
-            description='Yuspin dirancang dengan anti bacterial silver +, technology Silver+ ini sudah teruji secara Internasional diuji secara klinis di Jerman'
-          />
-        </SectionTechnology>
-      </Section>
-      <Section>
-        <SectionTitle
-          text='BEST SELLER'
-          className='!mb-0'
-        />
-        <SectionSubTitle
-          text='Dapatkan Produk - Produk Best Seller Kami'
-        />
-        <SectionBestSeller className='w-100 mb-5'>
-          <CardBestSeller image='/assets/sample/product-1.png' price={7500} name='Yuspin Sabun Cuci' locations={['Jakarta', 'Bandung']}>
-          </CardBestSeller>
-          <CardBestSeller image='/assets/sample/product-2.png' price={125000} name='Yuspin Pembalut Kain Reguler' locations={['Medan', 'Aceh']}>
-          </CardBestSeller>
-          <CardBestSeller image='/assets/sample/product-3.png' price={50000} name='Yuspin Pembalut Kain Premium' locations={['Surabaya', 'Surakarta']}>
-          </CardBestSeller>
-          <CardBestSeller image='/assets/sample/product-4.png' price={4000} name='Yuspin Cloudi Lansia' locations={['Pekalongan']}>
-          </CardBestSeller>
-        </SectionBestSeller>
-        <div className='w-full flex justify-center'>
-          <BaseButton className='inline-block' onClick={() => { }}>
-            Lihat Produk Lainnya
-          </BaseButton>
-        </div>
-      </Section>
-      <Section>
-        <SectionTitle
-          text='REVIEW'
-          className='!mb-0'
-        />
-        <SectionSubTitle
-          text='Kata Yuspiners yang telah menggunakan produk Yuspin'
-        />
-        <div className='h-48 w-full flex items-center content-center'>
-          <SectionSubTitle
-            text='NO CONTENT'
-          />
-        </div>
-      </Section>
-      <Section>
-        <div className='w-full flex flex-wrap items-center justify-center px-12 py-8'>
-          <Image
-            src='/assets/partners/i-news.png'
-            alt='image-partner'
-            width={68}
-            height={20}
-            className='me-5 mb-1'
-          />
-          <Image
-            src='/assets/partners/md.png'
-            alt='image-partner'
-            width={40}
-            height={20}
-            className='me-5 mb-1'
-          />
-          <Image
-            src='/assets/partners/tribun-news.png'
-            alt='image-partner'
-            width={84}
-            height={20}
-            className='me-5 mb-1'
-          />
-          <Image
-            src='/assets/partners/sindo-news.png'
-            alt='image-partner'
-            width={156}
-            height={20}
-            className='me-5 mb-1'
-          />
-          <Image
-            src='/assets/partners/interupsi.png'
-            alt='image-partner'
-            width={120}
-            height={20}
-            className='me-5 mb-1'
-          />
-          <Image
-            src='/assets/partners/akurat.png'
-            alt='image-partner'
-            width={100}
-            height={20}
-            className='me-5 mb-1'
-          />
-          <Image
-            src='/assets/partners/telusur.png'
-            alt='image-partner'
-            width={70}
-            height={20}
-            className='me-5 mb-1'
-          />
-          <Image
-            src='/assets/partners/klik.png'
-            alt='image-partner'
-            width={20}
-            height={20}
-            className='me-5 mb-1'
-          />
-          <Image
-            src='/assets/partners/indopos.png'
-            alt='image-partner'
-            width={122}
-            height={20}
-            className='me-5 mb-1'
-          />
-          <Image
-            src='/assets/partners/rumah-gagasan.png'
-            alt='image-partner'
-            width={79}
-            height={20}
-            className='me-5 mb-1'
-          />
-          <Image
-            src='/assets/partners/edu-news.png'
-            alt='image-partner'
-            width={119}
-            height={20}
-          />
-        </div>
-      </Section>
-      <Section className='!px-0 !py-0'>
-        <Hero />
-      </Section>
-      <Footer>
-        <FooterTagLine text='Yuspin - Cloth Your Napkins' />
-        <FooterDescription text='"Pilihan Tepat Wanita Cermat"Yuspin adalah pembalut wanita yg sehat dan hemat yang di desain khusus dari bahan kaos yg nyaman dan dipadukan dengan bahan handuk kualitas terbaik sehingga memiliki daya serap tinggi, dan bahan pelapis anti bocor khusus yang memberi kenyamanan saat dipakai sehingga tidak mudah bocor.' />
-        <hr className='border-b-white border-b-2 mb-5' />
-        <FooterInformation>
-          <FooterInformationColumn>
-            c
-          </FooterInformationColumn>
-        </FooterInformation>
-      </Footer>
       <div className='w-full px-10 py-10'>
-        <Text text='coba' size='extra-large' className='mb-5' />
-        <div className='inline-block'>
-          <Button type='accent-outlined' size='small'>ABC</Button>
+        <Text text='coba' size='small' className='' />
+        <Button type='accent-outlined' size='small' className='mb-3'>ABC</Button>
+        <ButtonIcon type='primary-outlined' size='small' icon='bx-cart' className='mb-3'>Submit</ButtonIcon>
+        <Link to='#' text='this is basic link' color='#F36486' />
+
+        <div role="status">
+          <svg aria-hidden="true" className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor" />
+            <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill" />
+          </svg>
+          <span className="sr-only">Loading...</span>
         </div>
-        <Link to='#' text='this is basic link' color='#F36486' hoverColor='red' />
-        
+
       </div>
     </main>
   )

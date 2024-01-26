@@ -1,21 +1,29 @@
 import React from 'react'
 
+type SizeOptions = 'small' | 'medium' | 'large'
+type TypeOptions = 'primary' | 'primary-outlined' | 'accent' | 'accent-outlined'
+
 export interface IProps {
     children: React.ReactNode,
     className?: string
     as?: string
-    size?: 'small' | 'medium' | 'large',
-    type?: 'primary' | 'primary-outlined' | 'accent' | 'accent-outlined',
+    size?: SizeOptions,
+    type?: TypeOptions,
+}
+
+export interface IIconProps extends IProps {
+    icon: string
 }
 
 export interface IStyledProps {
-    size: 'small' | 'medium' | 'large',
-    type: 'primary' | 'primary-outlined' | 'accent' | 'accent-outlined',
+    size: SizeOptions,
+    type: TypeOptions,
 }
 
 interface SizeProps {
     fontSize: string,
-    padding: string
+    padding: string,
+    iconMargin: string
 }
 
 export interface ISize {
