@@ -30,8 +30,8 @@ export default function Home() {
         <div className='rounded-md block border-black border py-2 px-3 mb-3'>
           <p className='font-bold'>Button</p>
           <Button theme='accent-outlined' size='small' className='mb-3'>ABC</Button>
-          <ButtonIcon theme='primary-outlined' size='small' icon='bx-cart' addOn='prepend' className='mb-3'>Submit</ButtonIcon>
-          <ButtonIcon theme='primary-outlined' size='small' icon='bx-cart' addOn='append' className='mb-3'>Submit</ButtonIcon>
+          <ButtonIcon theme='primary-outlined' size='small' icon='bx-cart' addon='prepend' className='mb-3'>Submit</ButtonIcon>
+          <ButtonIcon theme='primary-outlined' size='small' icon='bx-cart' addon='append' className='mb-3'>Submit</ButtonIcon>
           <ButtonCircle theme='accent-outlined' size='medium' className='mb-3'>ABC</ButtonCircle>
         </div>
 

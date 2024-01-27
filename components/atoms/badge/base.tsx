@@ -6,7 +6,7 @@ function Base({
     value
 }: IProps) {
     return (
-        <Badge>{value}</Badge>
+        <Badge className=''>{value}</Badge>
     )
 }
 

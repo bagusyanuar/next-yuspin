@@ -65,8 +65,8 @@ const themeProps: ITheme = {
     },
 }
 
-const addOnMargin = ({ addOn, size }: IIconStyledProps): string => {
-    return addOn === 'append' ? `margin-left: ${sizeProps[size].iconMargin};` : `margin-right: ${sizeProps[size].iconMargin};`;
+const addOnMargin = ({ $addon, size }: IIconStyledProps): string => {
+    return $addon === 'append' ? `margin-left: ${sizeProps[size].iconMargin};` : `margin-right: ${sizeProps[size].iconMargin};`;
 }
 
 export const StyledButton = styled.button<IStyledProps>`

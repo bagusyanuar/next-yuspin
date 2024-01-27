@@ -13,7 +13,7 @@ export interface IProps {
 
 export interface IIconProps extends IProps {
     icon: string,
-    addOn: AddOnOptions
+    addon: AddOnOptions
 }
 
 export interface IStyledProps {
@@ -22,7 +22,7 @@ export interface IStyledProps {
 }
 
 export interface IIconStyledProps extends IStyledProps {
-    addOn: AddOnOptions
+    $addon: AddOnOptions
 }
 
 interface SizeProps {

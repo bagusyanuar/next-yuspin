@@ -5,19 +5,19 @@ import { IIconProps } from '../type'
 function Icon({
     children,
     icon,
-    addOn = 'prepend',
+    addon = 'prepend',
     className = '',
     size = 'medium',
     theme = 'primary',
 }: IIconProps) {
     return (
-        <StyledButtonIcon size={size} theme={theme} className={className} addOn={addOn}>
+        <StyledButtonIcon size={size} theme={theme} className={className} $addon={addon}>
             {
-                addOn === 'prepend' ? <i className={`bx ${icon}`}></i> : ''
+                addon === 'prepend' ? <i className={`bx ${icon}`}></i> : ''
             }
             {children}
             {
-                addOn === 'append' ? <i className={`bx ${icon}`}></i> : ''
+                addon === 'append' ? <i className={`bx ${icon}`}></i> : ''
             }
         </StyledButtonIcon>
     )
