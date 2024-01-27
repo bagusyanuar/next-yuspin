@@ -5,6 +5,13 @@ export interface IProps {
     color?: string,
 }
 
+export interface INavMenuProps {
+    icon: string,
+    to: string,
+    children?: React.ReactNode,
+    className?: string,
+}
+
 export interface IStyledProps {
     color: string
 }

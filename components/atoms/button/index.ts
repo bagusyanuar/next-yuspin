@@ -1,7 +1,9 @@
-import Button from './button'
-import ButtonIcon from './button-icon'
+import Button from './types/base'
+import ButtonIcon from './types/icon'
+import ButtonCircle from './types/circle'
 
 export default Button
 export {
-    ButtonIcon
+    ButtonIcon,
+    ButtonCircle
 }

@@ -1,21 +1,24 @@
 import styled from "styled-components";
-import { IStyledProps, ISize, ITheme } from './type'
+import { IStyledProps, IIconStyledProps, ISize, ITheme } from './type'
 
 const sizeProps: ISize = {
     small: {
         fontSize: '0.8em',
         padding: '0.25rem 0.8rem',
-        iconMargin: '0.25rem'
+        iconMargin: '0.25rem',
+        circleSize: '3.25rem'
     },
     medium: {
         fontSize: '1em',
         padding: '0.6rem 1.25rem',
-        iconMargin: '0.5rem'
+        iconMargin: '0.5rem',
+        circleSize: '4rem'
     },
     large: {
         fontSize: '1.25em',
         padding: '1rem 2rem',
-        iconMargin: '0.75rem'
+        iconMargin: '0.75rem',
+        circleSize: '4.75rem'
     },
 }
 
@@ -62,13 +65,16 @@ const themeProps: ITheme = {
     },
 }
 
+const addOnMargin = ({ addOn, size }: IIconStyledProps): string => {
+    return addOn === 'append' ? `margin-left: ${sizeProps[size].iconMargin};` : `margin-right: ${sizeProps[size].iconMargin};`;
+}
 
-export const StyledButton = styled.div<IStyledProps>`
-    background-color: ${({ type }) => themeProps[type].background};
-    color: ${({ type }) => themeProps[type].color};
+export const StyledButton = styled.button<IStyledProps>`
+    background-color: ${({ theme }) => themeProps[theme].background};
+    color: ${({ theme }) => themeProps[theme].color};
     width: fit-content;
     height: fit-content;
-    border: 1px solid ${({ type }) => themeProps[type].borderColor};
+    border: 1px solid ${({ theme }) => themeProps[theme].borderColor};
     border-radius: 0.25rem;
     cursor: pointer;
     padding: ${({ size }) => sizeProps[size].padding};
@@ -76,20 +82,20 @@ export const StyledButton = styled.div<IStyledProps>`
     transition: all 0.2s ease-in-out;
 
     &:hover {
-        background-color: ${({ type }) => themeProps[type].hover.background};
-        color: ${({ type }) => themeProps[type].hover.color};
-        border: 1px solid ${({ type }) => themeProps[type].hover.borderColor};
+        background-color: ${({ theme }) => themeProps[theme].hover.background};
+        color: ${({ theme }) => themeProps[theme].hover.color};
+        border: 1px solid ${({ theme }) => themeProps[theme].hover.borderColor};
     }
 `
 
-export const StyledButtonIcon = styled.div<IStyledProps>`
+export const StyledButtonIcon = styled.div<IIconStyledProps>`
     display: flex;
     align-items: center;
-    background-color: ${({ type }) => themeProps[type].background};
-    color: ${({ type }) => themeProps[type].color};
+    background-color: ${({ theme }) => themeProps[theme].background};
+    color: ${({ theme }) => themeProps[theme].color};
     width: fit-content;
     height: fit-content;
-    border: 1px solid ${({ type }) => themeProps[type].borderColor};
+    border: 1px solid ${({ theme }) => themeProps[theme].borderColor};
     border-radius: 0.25rem;
     cursor: pointer;
     padding: ${({ size }) => sizeProps[size].padding};
@@ -97,18 +103,39 @@ export const StyledButtonIcon = styled.div<IStyledProps>`
     transition: all 0.2s ease-in-out;
 
     .bx {
-        color: ${({ type }) => themeProps[type].color};
+        color: ${({ theme }) => themeProps[theme].color};
         transition: all 0.2s ease-in-out;
-        margin-right: ${({ size }) => sizeProps[size].iconMargin};
+        ${addOnMargin}
     }
     
     &:hover {
-        background-color: ${({ type }) => themeProps[type].hover.background};
-        color: ${({ type }) => themeProps[type].hover.color};
-        border: 1px solid ${({ type }) => themeProps[type].hover.borderColor};
+        background-color: ${({ theme }) => themeProps[theme].hover.background};
+        color: ${({ theme }) => themeProps[theme].hover.color};
+        border: 1px solid ${({ theme }) => themeProps[theme].hover.borderColor};
 
         .bx {
-            color: ${({ type }) => themeProps[type].hover.color};
+            color: ${({ theme }) => themeProps[theme].hover.color};
         }
+    }
+`
+
+export const StyledCircleButton = styled.button<IStyledProps>`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: ${({ theme }) => themeProps[theme].background};
+    color: ${({ theme }) => themeProps[theme].color};
+    width: ${({ size }) => sizeProps[size].circleSize};
+    height: ${({ size }) => sizeProps[size].circleSize};
+    border: 1px solid ${({ theme }) => themeProps[theme].borderColor};
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: ${({ size }) => sizeProps[size].fontSize};
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: ${({ theme }) => themeProps[theme].hover.background};
+        color: ${({ theme }) => themeProps[theme].hover.color};
+        border: 1px solid ${({ theme }) => themeProps[theme].hover.borderColor};
     }
 `

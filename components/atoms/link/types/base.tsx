@@ -1,8 +1,8 @@
 import React from 'react'
-import { IProps } from './link.types'
-import { StyledLink } from './link.styled'
+import { IProps } from '../type'
+import { StyledLink } from '../style'
 
-function Link({
+function Base({
     text,
     to = '#',
     className = '',
@@ -19,4 +19,4 @@ function Link({
     )
 }
 
-export default Link
+export default Base

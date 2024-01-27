@@ -1,29 +1,35 @@
 import React from 'react'
 
 type SizeOptions = 'small' | 'medium' | 'large'
-type TypeOptions = 'primary' | 'primary-outlined' | 'accent' | 'accent-outlined'
+type AddOnOptions = 'prepend' | 'append'
+type ThemeOptions = 'primary' | 'primary-outlined' | 'accent' | 'accent-outlined'
 
 export interface IProps {
     children: React.ReactNode,
     className?: string
-    as?: string
     size?: SizeOptions,
-    type?: TypeOptions,
+    theme?: ThemeOptions,
 }
 
 export interface IIconProps extends IProps {
-    icon: string
+    icon: string,
+    addOn: AddOnOptions
 }
 
 export interface IStyledProps {
     size: SizeOptions,
-    type: TypeOptions,
+    theme: ThemeOptions,
+}
+
+export interface IIconStyledProps extends IStyledProps {
+    addOn: AddOnOptions
 }
 
 interface SizeProps {
     fontSize: string,
     padding: string,
-    iconMargin: string
+    iconMargin: string,
+    circleSize: string,
 }
 
 export interface ISize {
