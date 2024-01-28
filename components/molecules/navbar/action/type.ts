@@ -3,7 +3,7 @@ export interface IProps {
     className?: string
 }
 
-type TItem = {
+export type TItem = {
     to: string
     icon: string
     showBadge?: boolean

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Text from '@/components/atoms/text'
 import Button, { ButtonIcon, ButtonCircle } from '@/components/atoms/button'
-import Link, { NavMenuLink, NavActionLink } from '@/components/atoms/link'
+import Link, { NavLink, NavActionLink, NavSidebarTriggerLink } from '@/components/atoms/link'
 import NavbarAction from '@/components/molecules/navbar/action'
 import NavbarLink from '@/components/molecules/navbar/link'
 import Navbar from '@/components/navigation/navbar'
@@ -38,8 +38,10 @@ export default function Home() {
         <div className='rounded-md block border-black border py-2 px-3 mb-5'>
           <p className='font-bold'>Link</p>
           <Link to='#' text='Basic' color='#F36486' className='me-3' />
-          <NavMenuLink to='#' text='Navbar Menu' color='#F36486' className='me-3' />
+          <NavLink to='#' text='Navbar Menu' color='#F36486' className='me-3' />
           <NavActionLink to='#' icon='bx-cart' />
+          <NavSidebarTriggerLink icon='bx-menu' onClick={() => {console.log('check');
+          }} />
         </div>
 
         <p className='mb-3 font-bold'>MOLECULES</p>
@@ -49,6 +51,7 @@ export default function Home() {
             { icon: 'bx-cart', to: '#', showBadge: true, badgeValue: 10 },
             { icon: 'bx-user', to: '#', showBadge: true }
           ]} />
+          <p className='font-bold'>NAVBAR LINK</p>
           <NavbarLink items={[
             { text: 'HOME', to: '#' },
             { text: 'PRODUCT', to: '#' },

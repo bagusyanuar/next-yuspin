@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from '@/components/media'
 import { IStyledProps } from './type'
 
 export const StyledLink = styled.a<IStyledProps>`
@@ -42,5 +43,25 @@ export const StyledNavActionLink = styled.a`
 
     &:hover {
         background-color: rgba(220, 220, 220, 0.3)
+    }
+`
+export const StyledNavSidebarTriggerLink = styled.a`
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-dark);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: rgba(220, 220, 220, 0.3)
+    }
+
+    @media ${device.tablet} {
+        display: none;
     }
 `

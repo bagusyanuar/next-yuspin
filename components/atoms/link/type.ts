@@ -12,6 +12,12 @@ export interface INavMenuProps {
     className?: string,
 }
 
+export interface INavSidebarTriggerProps {
+    icon: string,
+    className?: string,
+    onClick: () => void
+}
+
 export interface IStyledProps {
     color: string
 }

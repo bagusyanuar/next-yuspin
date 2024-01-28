@@ -2,7 +2,7 @@ import React from 'react'
 import { IProps } from '../../type'
 import { StyledNavMenuLink } from '../../style'
 
-function Menu({
+function Link({
     text,
     to,
     className = '',
@@ -17,4 +17,4 @@ function Menu({
     )
 }
 
-export default Menu
+export default Link

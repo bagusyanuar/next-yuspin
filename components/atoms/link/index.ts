@@ -1,9 +1,11 @@
 import Link from './types/base'
-import NavMenuLink from './types/nav/menu'
+import NavLink from './types/nav/link'
 import NavActionLink from './types/nav/action'
+import NavSidebarTriggerLink from './types/nav/sidebar-trigger'
 
 export default Link
 export {
-    NavMenuLink,
-    NavActionLink
+    NavLink,
+    NavActionLink,
+    NavSidebarTriggerLink
 }
