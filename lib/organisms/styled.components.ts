@@ -30,5 +30,10 @@ export const StyledFooterWrapper = styled.div`
 export const FooterInformationWrapper = styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    @media ${device.tabletL} {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 `

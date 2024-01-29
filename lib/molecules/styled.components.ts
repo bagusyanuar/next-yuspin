@@ -59,7 +59,20 @@ export const FooterInformatioLocationWrapper = styled.div`
     align-items: start;
     margin-bottom: 1rem;
 `
+
 export const FooterInformatioLocationIcon = styled.i`
     line-height: 1.5;
     margin-right: 0.5rem;
+`
+
+export const FooterInformatioSocialMediaWrapper = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+export const FooterInformatioSocialMediaIcon = styled.a`
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 0.75rem;
+    font-size: 1.25em;
 `

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterDescription, FooterMenu, FooterLocation } from '@/lib/molecules/footer'
+import { FooterDescription, FooterMenu, FooterLocation, FooterSocialMedia } from '@/lib/molecules/footer'
 
 import { StyledFooterWrapper, FooterInformationWrapper } from '../styled.components'
 
@@ -10,6 +10,7 @@ const Footer = ({ children = '' }: IProps) => {
             <FooterInformationWrapper>
                 <FooterMenu />
                 <FooterLocation />
+                <FooterSocialMedia />
             </FooterInformationWrapper>
         </StyledFooterWrapper>
     )
