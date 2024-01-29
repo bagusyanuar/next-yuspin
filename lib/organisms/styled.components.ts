@@ -24,6 +24,11 @@ export const StyledFooterWrapper = styled.div`
     color: white;
 
     @media ${device.tabletL} {
-        padding: 3rem 5rem;
+        padding: 4rem 8rem;
     }
+`
+export const FooterInformationWrapper = styled.div`
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 `

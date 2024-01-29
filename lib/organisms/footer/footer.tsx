@@ -1,12 +1,16 @@
 import React from 'react'
-import { FooterDescription } from '@/lib/molecules/footer'
+import { FooterDescription, FooterMenu, FooterLocation } from '@/lib/molecules/footer'
 
-import { StyledFooterWrapper } from '../styled.components'
+import { StyledFooterWrapper, FooterInformationWrapper } from '../styled.components'
 
 const Footer = ({ children = '' }: IProps) => {
     return (
         <StyledFooterWrapper>
             <FooterDescription />
+            <FooterInformationWrapper>
+                <FooterMenu />
+                <FooterLocation />
+            </FooterInformationWrapper>
         </StyledFooterWrapper>
     )
 }
