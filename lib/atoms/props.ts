@@ -60,3 +60,9 @@ export type ButtonSizeOptions = 'small' | 'medium' | 'large'
 
 //atomic text property
 export interface IStyledTextProps { $size: TextSizeOptions }
+
+//atomic backdrop property
+export interface IStyledSidebarBackdropProps { $show: boolean }
+
+//atomic sidebar property
+export interface IStyledSidebarToggleProps { $show: boolean }

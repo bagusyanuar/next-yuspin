@@ -1,7 +1,9 @@
-import NavbarLink from './link'
-import NavbarMenu from './menu'
+import NavbarLinks from './link'
+import NavbarMenus from './menu'
+import SidebarTrigger from './trigger'
 
 export {
-    NavbarLink,
-    NavbarMenu
+    NavbarLinks,
+    NavbarMenus,
+    SidebarTrigger
 }

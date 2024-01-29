@@ -2,14 +2,14 @@ import React from 'react'
 import { TextSizeOptions, HeadingOptions } from '../props'
 import { StyledText } from '../styled.components'
 
-const Heading = ({
+function Heading({
     text,
     size,
     className = '',
     as = 'h1'
-}: IProps) => {
+}: IProps) {
     return (
-        <StyledText $size={size} as={as} className={className}>
+        <StyledText $size={size} as={as} className={`${className}`}>
             {text}
         </StyledText>
     )

@@ -2,26 +2,17 @@ import React from 'react'
 import { NavLink } from '@/lib/atoms/link'
 import { StyledNavbarLinkWrapper } from '../styled.components'
 
-const NavbarLink = ({
-    items,
-    className = ''
-}: IProps) => {
+const NavbarLink = ({ className = '' }: IProps) => {
     return (
         <StyledNavbarLinkWrapper className={className}>
-            {
-                items.map((v, k) => {
-                    return <NavLink key={k} text={v.text} to={v.to} />
-                })
-            }
+            <NavLink text='PRODUK' to='/produk' />
+            <NavLink text='KOMUNITAS' to='/komunitas' />
+            <NavLink text='PENDAFTARAN MITRA' to='/pendaftaran-mitra' />
+            <NavLink text='TENTANG' to='/tentang' />
         </StyledNavbarLinkWrapper>
     )
 }
 
 export default NavbarLink
 
-type TItems = {
-    to: string
-    text: string
-}
-
-interface IProps { items: Array<TItems>, className?: string }
+interface IProps { className?: string }

@@ -1,10 +1,14 @@
 import styled from "styled-components";
-import { IStyledTextProps, TextSize } from './props'
+import {
+    IStyledTextProps,
+    TextSize,
+    IStyledSidebarBackdropProps,
+    IStyledSidebarToggleProps
+} from './props'
 
 // atomic text style
 export const StyledText = styled.p<IStyledTextProps>`
     font-size: ${({ $size }) => TextSize[$size]};
-    margin-bottom: 0;
 `
 
 //atomic link style
@@ -49,4 +53,29 @@ export const StyledNavMenuLink = styled.a`
     &:hover {
         background-color: rgba(220, 220, 220, 0.3)
     }
+`
+
+export const StyledSidebarBackdrop = styled.div<IStyledSidebarBackdropProps>`
+    display: ${({ $show }) => $show ? 'block' : 'none'};
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+`
+
+export const StyledSidebarToggleWrapper = styled.div<IStyledSidebarToggleProps>`
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    padding: 1rem 0.5rem;
+    transform: ${({ $show }) => $show ? 'translateX(0%)' : 'translateX(-100%)'};
+    transition: transform 0.2s ease-in-out;
 `
