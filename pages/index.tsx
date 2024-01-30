@@ -6,6 +6,7 @@ function Home() {
     let arrIndex = [1, 2, 3, 4, 5]
 
     const myTimer = () => {
+        let first
         arrIndex.splice(0, 1)
         console.log(arrIndex);
     }
