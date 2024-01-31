@@ -1,24 +1,25 @@
-import React, { useState, useEffect } from 'react'
 import { Layout } from '@/templates/layouts'
 
+import { SlickWrapper, SlickItem, SlickNextArrow, SlickPrevArrow } from '@/lib/atoms/slick'
+
 function Home() {
-
-    let arrIndex = [1, 2, 3, 4, 5]
-
-    const myTimer = () => {
-        let first
-        arrIndex.splice(0, 1)
-        console.log(arrIndex);
+    const slidersSetting = {
+        dots: true,
+        autoplay: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        nextArrow: <SlickNextArrow />,
+        prevArrow: <SlickPrevArrow />
     }
-    useEffect(() => {
-        // let i = setInterval(myTimer, 10000)
-        // return () => { clearInterval(i) }
-    }, [])
-
-
     return (
         <Layout>
-
+            <SlickWrapper settings={slidersSetting} >
+                <SlickItem className='bg-blue-gray-600'/>
+                <SlickItem className='bg-red-600'/>
+                <SlickItem className='bg-purple-600'/>
+            </SlickWrapper>
         </Layout>
     )
 }
