@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Slider from 'react-slick'
 import {
     IStyledTextProps,
     TextSize,
@@ -79,11 +80,35 @@ export const StyledSidebarToggleWrapper = styled.div<IStyledSidebarToggleProps>`
     transform: ${({ $show }) => $show ? 'translateX(0%)' : 'translateX(-100%)'};
     transition: transform 0.2s ease-in-out;
 `
+export const SlickWrapper = styled(Slider) <{ $height: number }>`
+    border-radius: 10px;
+    height: ${({ $height }) => $height }px;
 
-export const SlickItemWrapper = styled.div<{ $height: number }>`
+    .slick-track {
+        height: ${({ $height }) => $height }px;
+
+        .slick-slide {
+            height: ${({ $height }) => $height }px !important;
+
+            div {
+                height: ${({ $height }) => $height }px !important;
+            }
+        }
+    }
+    
+`
+
+export const SlickItemWrapper = styled.div`
     width: 100%;
-    aspect-ratio: 3 / 1;
-    height: ${({ $height }) => $height}px;
+    /* aspect-ratio: 3 / 1; */
+    border-radius: 10px;
+    height: inherit !important;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 `
 
 export const SlictNextArrow = styled.div`

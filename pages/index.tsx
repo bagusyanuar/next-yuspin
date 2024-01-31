@@ -11,14 +11,14 @@ function Home() {
         slidesToShow: 1,
         slidesToScroll: 1,
         nextArrow: <SlickNextArrow />,
-        prevArrow: <SlickPrevArrow />
+        prevArrow: <SlickPrevArrow />,
     }
     return (
         <Layout>
-            <SlickWrapper settings={slidersSetting} >
-                <SlickItem className='bg-blue-gray-600'/>
-                <SlickItem className='bg-red-600'/>
-                <SlickItem className='bg-purple-600'/>
+            <SlickWrapper settings={slidersSetting} height={500}>
+                <SlickItem className='bg-blue-gray-600' imagePath='/assets/sliders/slider-yuspin-2.jpeg'/>
+                <SlickItem className='bg-red-600' imagePath='/assets/sliders/slider-yuspin.png'/>
+                <SlickItem className='bg-purple-600' imagePath='/assets/sliders/slider-yuspin-2.jpeg'/>
             </SlickWrapper>
         </Layout>
     )

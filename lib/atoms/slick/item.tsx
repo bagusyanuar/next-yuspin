@@ -1,14 +1,18 @@
 import React from 'react'
+import Image from 'next/image'
 import { SlickItemWrapper } from '../styled.components'
 
-const Item = ({ className }: IProps) => {
+const Item = ({
+    imagePath,
+    className = ''
+}: IProps) => {
     return (
-        <SlickItemWrapper $height={400} className={className}>
-
+        <SlickItemWrapper className={className}>
+            <Image src={imagePath} height={500} width={500} alt='slick-image'/>
         </SlickItemWrapper>
     )
 }
 
 export default Item
 
-interface IProps { className?: string }
+interface IProps { imagePath: string, className?: string }

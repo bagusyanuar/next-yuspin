@@ -1,18 +1,19 @@
 import React from 'react'
-import Slider from 'react-slick'
+import { SlickWrapper } from '../styled.components'
 
 const Wrapper = ({
     children,
-    settings
+    settings,
+    height
 }: IProps) => {
-    
+
     return (
-        <Slider {...settings}>
+        <SlickWrapper {...settings} adaptiveHeight $height={height}>
             {children}
-        </Slider>
+        </SlickWrapper>
     )
 }
 
 export default Wrapper
 
-interface IProps { children: React.ReactNode, settings: any }
+interface IProps { children: React.ReactNode, settings: any, height: number }
