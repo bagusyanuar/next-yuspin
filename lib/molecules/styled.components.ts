@@ -76,3 +76,14 @@ export const FooterInformatioSocialMediaIcon = styled.a`
     margin-right: 0.75rem;
     font-size: 1.25em;
 `
+
+export const TechnologyWrapper = styled.div`
+    width: 100%;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @media ${device.laptop} {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+`

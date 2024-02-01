@@ -8,7 +8,7 @@ const Item = ({
 }: IProps) => {
     return (
         <SlickItemWrapper className={className}>
-            <Image src={imagePath} height={500} width={500} alt='slick-image'/>
+            <Image src={imagePath} height={1500} width={1500} alt='slick-image' placeholder='blur' blurDataURL={imagePath}/>
         </SlickItemWrapper>
     )
 }

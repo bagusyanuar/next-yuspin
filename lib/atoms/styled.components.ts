@@ -82,16 +82,18 @@ export const StyledSidebarToggleWrapper = styled.div<IStyledSidebarToggleProps>`
 `
 export const SlickWrapper = styled(Slider) <{ $height: number }>`
     border-radius: 10px;
-    height: ${({ $height }) => $height }px;
+    width: 100%;
+    aspect-ratio: 4 / 2;
+    /* height: ${({ $height }) => $height}px; */
 
     .slick-track {
-        height: ${({ $height }) => $height }px;
+        /* height: ${({ $height }) => $height}px; */
 
         .slick-slide {
-            height: ${({ $height }) => $height }px !important;
+            /* height: ${({ $height }) => $height}px !important; */
 
             div {
-                height: ${({ $height }) => $height }px !important;
+                /* height: ${({ $height }) => $height}px !important; */
             }
         }
     }
@@ -100,14 +102,15 @@ export const SlickWrapper = styled(Slider) <{ $height: number }>`
 
 export const SlickItemWrapper = styled.div`
     width: 100%;
-    /* aspect-ratio: 3 / 1; */
+    aspect-ratio: 4 / 2;
     border-radius: 10px;
-    height: inherit !important;
-
+    /* height: 50px; */
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
     }
 `
 
@@ -164,5 +167,33 @@ export const SlickPrevArrow = styled.div`
         background-color: var(--primary-color);
         color: white;
         opacity: 1;
+    }
+`
+
+export const CardTechnologyWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    padding: 1rem 1.5rem;
+
+    img {
+        margin-bottom: 1.5rem;
+        width: 45px;
+        height: 45px;
+    }
+
+    .title {
+        font-weight: 600;
+        font-size: 0.8em;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+    }
+
+    .description {
+        font-size: 0.7em;
+        text-align: center;
+        color: var(--text-dark-light);
     }
 `
