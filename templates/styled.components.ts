@@ -5,7 +5,7 @@ export const StyledContentWrapper = styled.div`
     padding: 0.5rem 1rem;
     min-height: 530px;
     
-    @media ${device.tablet} {
-        padding: 0.5rem 5rem;
+    @media ${device.tabletL} {
+        padding: 1rem 5rem;
     }
 `

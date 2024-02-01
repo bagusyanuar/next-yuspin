@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from '../media'
 import Slider from 'react-slick'
 import {
     IStyledTextProps,
@@ -182,6 +183,11 @@ export const CardTechnologyWrapper = styled.div`
         margin-bottom: 1.5rem;
         width: 45px;
         height: 45px;
+
+        @media ${device.tablet} {
+            width: 65px;
+            height: 65px;
+        }
     }
 
     .title {
@@ -189,11 +195,19 @@ export const CardTechnologyWrapper = styled.div`
         font-size: 0.8em;
         margin-bottom: 1rem;
         color: var(--text-dark);
+
+        @media ${device.tablet} {
+            font-size: 1em;
+        }
     }
 
     .description {
         font-size: 0.7em;
         text-align: center;
         color: var(--text-dark-light);
+
+        @media ${device.tablet} {
+            font-size: 0.8em;
+        }
     }
 `
