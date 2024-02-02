@@ -1,5 +1,9 @@
 import CardTechnology from './technology'
+import CardProduct, { TProductType } from './product'
 
 export {
-    CardTechnology
+    CardTechnology,
+    CardProduct,
 }
+
+export type ProductType = TProductType
